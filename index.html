@@ -1,233 +1,235 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nazrawi Gedion - Backend Developer Resume</title>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #2980b9;
-            --text: #333333;
-            --light-bg: #f8f9fa;
-            --border: #e0e0e0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #ffffff;
-        }
-        header {
-            text-align: center;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            margin: 0 0 5px 0;
-            color: var(--primary);
-            font-size: 2.2rem;
-        }
-        h2 {
-            font-size: 1.2rem;
-            color: var(--accent);
-            margin: 0 0 15px 0;
-            font-weight: 600;
-        }
-        .contact-info {
-            font-size: 0.95rem;
-            color: #555;
-        }
-        .contact-info span {
-            margin: 0 10px;
-        }
-        .contact-info a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        h3 {
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 5px;
-            color: var(--primary);
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .job, .school {
-            margin-bottom: 20px;
-        }
-        .job-header, .school-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 5px;
-        }
-        .job-title {
-            font-weight: bold;
-            color: var(--primary);
-            font-size: 1.05rem;
-        }
-        .company {
-            color: var(--accent);
-            font-weight: 600;
-        }
-        .date {
-            font-size: 0.9rem;
-            color: #666;
-            font-style: italic;
-        }
-        ul {
-            margin: 5px 0 0 20px;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 6px;
-            font-size: 0.95rem;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 12px;
-        }
-        .skill-category {
-            background: var(--light-bg);
-            padding: 10px 15px;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-        }
-        .skill-category strong {
-            color: var(--primary);
-            display: block;
-            margin-bottom: 4px;
-        }
-        .project-highlight {
-            background: var(--light-bg);
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 4px solid var(--accent);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume of Nazrawi Gedion, backend developer specializing in Go, APIs, and microservices.">
+  <title>Nazrawi Gedion | Go Backend Developer</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #536176;
+      --accent: #176b87;
+      --line: #d7dee7;
+      --soft: #f4f7fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e9edf2;
+      color: var(--ink);
+      font: 10pt/1.45 Arial, Helvetica, sans-serif;
+    }
+    .resume {
+      width: min(900px, calc(100% - 32px));
+      margin: 28px auto;
+      padding: 42px 48px;
+      background: #fff;
+      box-shadow: 0 8px 30px rgba(20, 35, 55, .12);
+    }
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 27pt;
+      line-height: 1.15;
+      letter-spacing: -.5px;
+    }
+    .headline {
+      color: var(--accent);
+      font-size: 12pt;
+      font-weight: bold;
+      margin: 0 0 9px;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 13px;
+      color: var(--muted);
+      font-size: 9pt;
+    }
+    a { color: inherit; text-decoration: none; }
+    .links a { color: var(--accent); }
+    section { margin-top: 17px; }
+    h2 {
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 10.5pt;
+      letter-spacing: 1.1px;
+      margin: 0 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
+    }
+    p { margin: 0; }
+    .summary { font-size: 10pt; }
+    .job { margin: 0 0 13px; break-inside: avoid; }
+    .job-heading {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 3px 12px;
+      margin-bottom: 3px;
+    }
+    .role { font-weight: bold; font-size: 10.3pt; }
+    .date { color: var(--muted); font-size: 9pt; white-space: nowrap; }
+    .company { color: var(--muted); }
+    ul { margin: 5px 0 0; padding-left: 18px; }
+    li { margin: 0 0 3px; padding-left: 1px; }
+    .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+    .skill-row { break-inside: avoid; }
+    .skill-row strong { display: inline-block; min-width: 118px; }
+    .project { margin-bottom: 9px; break-inside: avoid; }
+    .project-title { font-weight: bold; }
+    .tech { color: var(--muted); font-size: 9pt; }
+    .education-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; }
+    .note { color: var(--muted); font-size: 8.5pt; margin-top: 9px; }
+    @media (max-width: 650px) {
+      .resume { width: 100%; margin: 0; padding: 26px 22px; box-shadow: none; }
+      .skills { grid-template-columns: 1fr; }
+      h1 { font-size: 23pt; }
+    }
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      body { background: #fff; font-size: 9.5pt; }
+      .resume { width: 100%; margin: 0; padding: 0; box-shadow: none; }
+      a { text-decoration: none; }
+      section { margin-top: 13px; }
+      .job { margin-bottom: 10px; }
+      .no-print { display: none; }
+    }
+  </style>
 </head>
 <body>
-
+  <main class="resume">
     <header>
-        <h1>Nazrawi Gedion</h1>
-        <h2>Backend Developer (Golang, Rust, Python)</h2>
-        <div class="contact-info">
-            <span>Addis Ababa, Ethiopia</span> |
-            <span>+251 954 988 574</span> |
-            <span>nazrawi.gedionte@gmail.com</span> |
-            <span><a href="https://nazrawigedion123.github.io/portfolio/" target="_blank">Portfolio Website</a></span>
-        </div>
+      <h1>Nazrawi Gedion</h1>
+      <p class="headline">Go Backend Developer | APIs &amp; Microservices</p>
+      <div class="contact">
+        <span>Addis Ababa, Ethiopia</span>
+        <span>+251 954 988 574</span>
+        <span><a href="mailto:nazrawi.gedionte@gmail.com">nazrawi.gedionte@gmail.com</a></span>
+        <span class="links"><a href="https://github.com/nazrawigedion123">GitHub</a></span>
+        <span class="links"><a href="https://www.linkedin.com/in/nazrawi-gedion-121241378/">LinkedIn</a></span>
+        <span class="links"><a href="https://nazrawigedion123.github.io/">Portfolio</a></span>
+      </div>
     </header>
 
-    <main>
-        <section>
-            <h3>Experience</h3>
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Backend developer with professional experience building Go microservices and Python-based applications.
+        Experienced in REST API development, service integration, and database-backed applications, with additional
+        project experience in Rust and cross-platform development. Focused on maintainable code, clear service
+        boundaries, and reliable backend systems.
+      </p>
+    </section>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <span class="job-title">Backend Developer</span> | <span class="company">OneTap</span>
-                    </div>
-                    <div class="date">Jun 2025 – Present</div>
-                </div>
-                <ul>
-                    <li>Developed and maintained high-performance Go-based microservices powering OneTap's administrative web portal for managing USSD-based services.</li>
-                    <li>Designed and implemented a secure web gateway service enabling reliable communication between internal services and external financial systems.</li>
-                    <li>Collaborated with cross-functional teams (frontend, DevOps, QA) to ensure smooth integration, testing, and deployment of backend services.</li>
-                    <li>Applied software engineering best practices, emphasizing maintainable code, clean architecture, and robust security standards.</li>
-                </ul>
-            </div>
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <div class="skill-row"><strong>Languages</strong> Go, Python, Rust, JavaScript</div>
+        <div class="skill-row"><strong>Backend</strong> Gin, Echo, Django, Django REST Framework, FastAPI</div>
+        <div class="skill-row"><strong>APIs</strong> REST, gRPC, service integration</div>
+        <div class="skill-row"><strong>Databases</strong> PostgreSQL, MySQL, MongoDB, SQLite</div>
+        <div class="skill-row"><strong>Tools</strong> Git, GitHub Actions, Docker, Linux, CI/CD</div>
+        <div class="skill-row"><strong>Auth</strong> JWT, OAuth 2.0, social authentication</div>
+        <div class="skill-row"><strong>Frontend</strong> React, Vue.js, HTML, CSS</div>
+        <div class="skill-row"><strong>Other</strong> Odoo customization and deployment</div>
+      </div>
+    </section>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <span class="job-title">Backend Developer (Contract / Part-Time)</span> | <span class="company">BDN</span>
-                    </div>
-                    <div class="date">Sep 2024 – Present</div>
-                </div>
-                <ul>
-                    <li>Designed and developed scalable Django and Go-based applications, supporting full-stack solutions.</li>
-                    <li>Built and consumed robust RESTful APIs using Django REST Framework and Gin (Go).</li>
-                    <li>Currently developing an eLearning platform architecture using Golang (Gin) and React.</li>
-                    <li>Collaborated closely with frontend teams for seamless API integration and optimal client-server performance.</li>
-                </ul>
-            </div>
+    <section>
+      <h2>Professional Experience</h2>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <span class="job-title">Associate Technical Consultant (Odoo)</span> | <span class="company">Business Computing Services</span>
-                    </div>
-                    <div class="date">May 2022 – Nov 2024</div>
-                </div>
-                <ul>
-                    <li>Customized core Odoo modules (Sales, Inventory, Accounting, and CRM) to address unique client-specific business workflows.</li>
-                    <li>Developed and deployed custom Odoo modules to extend platform capabilities, reporting features, and automation.</li>
-                    <li>Led the end-to-end in-house deployment of Odoo for EPHARM, directing module setup, data migration, and user training.</li>
-                    <li>Gathered technical requirements, performed gap analysis, and translated business needs into tailored technical specifications.</li>
-                    <li>Provided ongoing system maintenance, performance tuning, bug fixes, and documentation for internal infrastructure and clients.</li>
-                </ul>
-            </div>
-        </section>
+      <div class="job">
+        <div class="job-heading">
+          <div><span class="role">Go Developer</span> <span class="company">| OneTap Technology</span></div>
+          <span class="date">Jun 2025 – Present</span>
+        </div>
+        <ul>
+          <li>Develop and maintain Go microservices supporting an administrative portal for USSD-based services.</li>
+          <li>Build backend APIs and gateway functionality that connect internal services with external financial systems.</li>
+          <li>Collaborate with frontend, DevOps, and QA colleagues to integrate, test, and deploy backend services.</li>
+          <li>Apply maintainable design, consistent error handling, and security-conscious implementation practices.</li>
+        </ul>
+      </div>
 
-        <section>
-            <h3>Technical Skills</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <strong>Backend</strong>
-                    Rust (Actix Web, Rocket, Diesel), Go (Gin, Echo), Python (Django, Django REST Framework, FastAPI)
-                </div>
-                <div class="skill-category">
-                    <strong>Frontend & APIs</strong>
-                    Vue.js, React, HTML5, CSS3, JavaScript, RESTful APIs, JWT, OAuth2, Social Auth
-                </div>
-                <div class="skill-category">
-                    <strong>Databases & Tools</strong>
-                    PostgreSQL, MySQL, MongoDB, Git, GitHub Actions, Docker, Linux, CI/CD
-                </div>
-                <div class="skill-category">
-                    <strong>Enterprise & ERP</strong>
-                    Odoo (Module customization, deployment, and administration)
-                </div>
-            </div>
-        </section>
+      <div class="job">
+        <div class="job-heading">
+          <div><span class="role">Backend Developer (Contract / Part-Time)</span> <span class="company">| BDN</span></div>
+          <span class="date">Sep 2024 – Present*</span>
+        </div>
+        <ul>
+          <li>Develop backend applications using Go/Gin and Django, including REST APIs for frontend integration.</li>
+          <li>Contribute to an eLearning platform using Go and React, supporting backend and client-server integration.</li>
+        </ul>
+      </div>
 
-        <section>
-            <h3>Education</h3>
-            <div class="school">
-                <div class="school-header">
-                    <div>
-                        <span class="job-title">BSc in Computer Science</span> | <span class="company">University of Gondar</span>
-                    </div>
-                    <div class="date">2018 – 2021</div>
-                </div>
-                <div class="contact-info">Gondar, Ethiopia</div>
-            </div>
-        </section>
+      <div class="job">
+        <div class="job-heading">
+          <div><span class="role">Associate Technical Consultant (Odoo)</span> <span class="company">| Business Computing Services</span></div>
+          <span class="date">May 2022 – Nov 2024</span>
+        </div>
+        <ul>
+          <li>Customized Odoo Sales, Inventory, Accounting, and CRM modules to support client business workflows.</li>
+          <li>Supported EPHARM deployment, including system setup, data migration, user training, and go-live activities.</li>
+          <li>Gathered requirements, performed gap analysis, and delivered tailored configuration, enhancements, and documentation.</li>
+        </ul>
+      </div>
+    </section>
 
-        <section>
-            <h3>Featured Projects</h3>
-            <div class="project-highlight">
-                <strong>Personal Portfolio & Projects Hub</strong>
-                <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
-                    Showcasing production-grade backend systems, microservice architectures, and full-stack applications. View the live implementation and source code on my <a href="https://nazrawigedion123.github.io/portfolio/" target="_blank" style="color: var(--accent); text-decoration: none;">Portfolio Website</a>.
-                </p>
-            </div>
-        </section>
-    </main>
+    <section>
+      <h2>Selected Projects</h2>
 
+      <div class="project">
+        <div><span class="project-title">P2P Networking / Chat Application</span> <span class="tech">| Go, libp2p, SQLite</span></div>
+        <p>Peer-to-peer networking project combining libp2p communication with a Go-based VPN tunnel. Explore the repository for implementation details and setup instructions.</p>
+        <p class="links"><a href="https://github.com/nazrawigedion123/libp2pchat">github.com/nazrawigedion123/libp2pchat</a></p>
+      </div>
+
+      <div class="project">
+        <div><span class="project-title">Actix Backend Template</span> <span class="tech">| Rust, Actix Web, Diesel, PostgreSQL</span></div>
+        <p>Reusable Rust web API template with a layered architecture, database integration, and structured logging.</p>
+        <p class="links"><a href="https://github.com/nazrawigedion123/actix-backend-template">github.com/nazrawigedion123/actix-backend-template</a></p>
+      </div>
+
+      <div class="project">
+        <div><span class="project-title">TgCommerce</span> <span class="tech">| Django REST Framework, React, Telegram</span></div>
+        <p>Multi-tenant e-commerce application integrating a web dashboard with Telegram bot workflows for product and order management.</p>
+        <p class="links"><a href="https://github.com/BDNsys/ecommerse-telegram">github.com/BDNsys/ecommerse-telegram</a></p>
+      </div>
+
+      <div class="project">
+        <div><span class="project-title">Todo or Not Todo</span> <span class="tech">| Tauri v2, Rust, Vue 3, SQLite</span></div>
+        <p>Cross-platform task application using a Rust backend library and a Vue-based interface.</p>
+        <p class="links"><a href="https://github.com/nazrawigedion123/todo-or-not-todo">github.com/nazrawigedion123/todo-or-not-todo</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Writing</h2>
+      <div class="project">
+        <span class="project-title">Memory Usage and Optimizations in Go</span>
+        <p>Technical article discussing Go garbage collection, memory allocation, and approaches to reducing GC pressure.</p>
+        <p class="links"><a href="https://nazrawigedion123.github.io/my-blogs/blog/2026/07/06/memory-usage-and-optimizations-in-go">Read the article</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education-line">
+        <div><strong>BSc in Computer Science</strong> | University of Gondar</div>
+        <span class="date">2018 – 2021</span>
+      </div>
+      <p class="company">Gondar, Ethiopia</p>
+    </section>
+
+    <p class="note">*Confirm BDN contract end date before sending. Keep only technologies and project claims you can confidently discuss in an interview.</p>
+  </main>
 </body>
 </html>
+
